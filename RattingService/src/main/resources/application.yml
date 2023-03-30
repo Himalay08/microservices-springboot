@@ -1,0 +1,22 @@
+server:
+  port: 8083
+  
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://test:test@test.ctart2g.mongodb.net/?retryWrites=true&w=majority
+      database: microservices
+  application:
+    name: RATINGS-SERVICE
+  
+  config:
+    import: configserver:http://localhost:8085  
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/              
